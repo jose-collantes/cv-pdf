@@ -3,6 +3,7 @@ const fs = require("node:fs");
 const sections = require("./data/sections");
 const jobs = require("./data/jobs");
 const professionalAreas = require("./data/professionalAreas");
+const knowledgeAreas = require("./data/deepKnowledgeAreas");
 const courses = require("./data/courses");
 const initializeConstants = require("./utils/helperFunctions");
 const {
@@ -45,17 +46,24 @@ professionalAreas.forEach((professionalArea) =>
 doc.moveDown(1);
 renderSection(doc, constants, sections[2]);
 
+knowledgeAreas.forEach((knowledgeArea) =>
+  renderArea(doc, constants, knowledgeArea)
+);
+
+doc.moveDown(1);
+renderSection(doc, constants, sections[3]);
+
 doc.moveDown(0.4);
 renderEssentialEducation(doc, constants);
 
-doc.addPage();
-renderSection(doc, constants, sections[3]);
+doc.moveDown(1);
+renderSection(doc, constants, sections[4]);
 
 doc.moveDown(0.4);
 renderCourses(doc, constants, courses);
 
 doc.moveDown(1);
-renderSection(doc, constants, sections[4]);
+renderSection(doc, constants, sections[5]);
 
 doc.moveDown(0.6);
 renderContactInformation(doc, constants);
