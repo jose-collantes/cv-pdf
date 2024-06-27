@@ -40,8 +40,8 @@ module.exports = [
     title: "Other Additional Skills",
     skillsOrProjects: [
       "Responsive web design (CSS).",
-      "Version Control (Git & GitHub)",
-      "Writing complex SQL queries",
+      "Version Control (Git & GitHub).",
+      "Writing complex SQL queries.",
       "Database Design. Normalization Rules.",
       "Uploading files.",
     ],

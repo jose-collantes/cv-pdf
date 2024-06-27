@@ -48,7 +48,7 @@ function renderArea(doc, constants, area) {
 
   doc.moveDown(0.4);
   doc.font("Helvetica-Bold").fontSize(10.5).fillColor(darkGrey);
-  doc.text(area.title, { underline: true });
+  doc.text(area.title, { continued: true }).text(":");
 
   if (!area.subareas) {
     renderSkillsOrProjects(doc, area);
@@ -175,7 +175,7 @@ function renderExperience(doc, constants, experience) {
 }
 
 function renderSkillsOrProjects(doc, area) {
-  doc.moveDown(0.3);
+  doc.moveDown(0.35);
   doc.font("Helvetica");
 
   renderList(doc, [...area.skillsOrProjects]);
