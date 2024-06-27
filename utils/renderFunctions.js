@@ -178,17 +178,7 @@ function renderSkillsOrProjects(doc, area) {
   doc.moveDown(0.3);
   doc.font("Helvetica");
 
-  const skillsOrProjects =
-    area.title !== "Desktop Applications"
-      ? [...area.skillsOrProjects]
-      : [area.skillsOrProjects[0]];
-
-  renderList(doc, skillsOrProjects);
-
-  if (area.title === "Desktop Applications") {
-    doc.addPage();
-    renderList(doc, [area.skillsOrProjects[1]]);
-  }
+  renderList(doc, [...area.skillsOrProjects]);
 }
 
 function renderList(doc, list) {

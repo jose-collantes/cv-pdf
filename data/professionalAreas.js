@@ -17,7 +17,7 @@ module.exports = [
   {
     title: "Services",
     skillsOrProjects: [
-      "Generate PDF and Word documents from JSON-structured data sources using JS and Node.js.",
+      "Generate PDF and Word documents from JSON-structured data sources using JavaScript and Node.js.",
     ],
   },
   {
@@ -26,18 +26,6 @@ module.exports = [
       "Developed two versions of a business management application: Version 1 used Python and tkinter with CSV files for data storage. Version 2 adopted professional standards, \
   utilizing MS Access tables and forms. \nBoth versions enable inventory management, invoice creation (Word/PDF), and reporting. Version 2 \
   introduces enhanced customer management functionality, allowing users to maintain customer records separately.",
-      "Currently maintaining and enhancing a complex MS Access application for my main client. The application integrates data from various Excel spreadsheets, \
-  mainly sourced from SAP, also including internal tables, queries, forms, and VBA code. Used primarily for assessing client debt, the system I developed \
-streamlines processes and data management.",
-    ],
-  },
-  {
-    title: "Analytical Skills",
-    skillsOrProjects: [
-      "Conducted structural calculations and analyses for aircraft components, assisted by different software like CATIA, Patran, Nasgro, and Excel.",
-      "Collaborated on a Python-based application for my degree's final project, which utilized extensive calculations and formulas from industry-standard texts such as \
-  Raymer's Aircraft Design and Torenbeek's. This project involved developing functions and classes for the preliminary design of a UAV, incorporating complex mathematical \
-and engineering principles.",
     ],
   },
   {
@@ -53,21 +41,9 @@ and engineering principles.",
         ],
       },
       {
-        title: "Stress Engineer",
+        title: "Notable Freelance Projects",
         skillsOrProjects: [
-          "Authored chapters of certification reports to document and explain analysis findings in clear and accessible language.",
-        ],
-      },
-      {
-        title: "Production Engineer",
-        skillsOrProjects: [
-          "Developed and drafted operational instructions for aircraft structure assembly operations, sometimes requiring the definition of new processes and optimized \
-  methodologies to improve efficiency and quality.",
-        ],
-      },
-      {
-        title: "Notable Freelance Project",
-        skillsOrProjects: [
+          "Researched and documented requirements for a new feature in Endesa France's enterprise web application to enable real-time data retrieval from the Podio API.",
           "Wrote a comprehensive user guide on the Asana project management platform for the client Translinguo Global.",
         ],
       },
