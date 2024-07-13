@@ -22,6 +22,7 @@ module.exports = function (doc) {
   const email = process.env.CV_EMAIL || "random@random.com";
   const phone = process.env.CV_PHONE || "999999999";
   const githubPage = process.env.CV_GITHUB_PAGE || "/random";
+  const linkedinPage = process.env.CV_LINKEDIN_PAGE || "/random";
 
   return {
     margins,
@@ -37,5 +38,6 @@ module.exports = function (doc) {
     email,
     phone,
     githubPage,
+    linkedinPage,
   };
 };
