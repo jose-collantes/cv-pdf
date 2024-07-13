@@ -17,7 +17,7 @@ module.exports = [
   {
     title: "Specific Skills for JS/TS",
     skillsOrProjects: [
-      "Unit and integration testing of RESTful APIs.",
+      "Unit and integration testing of API routes and middleware functions using jest and supertest.",
       "Test-Driven Development.",
       "Building components with React and Next.js.",
       "Managing Application State.",
@@ -43,7 +43,7 @@ module.exports = [
       "Version Control (Git & GitHub).",
       "Writing complex SQL queries.",
       "Database Design. Normalization Rules.",
-      "Uploading files.",
+      "Working with the file system.",
     ],
   },
 ];
