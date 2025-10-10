@@ -1,10 +1,14 @@
 const PDFDocument = require("pdfkit");
 const fs = require("node:fs");
-const sections = require("./data/sections");
-const jobs = require("./data/jobs");
-const professionalAreas = require("./data/professionalAreas");
-const knowledgeAreas = require("./data/deepKnowledgeAreas");
-const courses = require("./data/courses");
+
+const lang = "es"; // 'es/en'
+
+const sections = require(`./data/${lang}/sections`);
+const jobs = require(`./data/${lang}/jobs`);
+const professionalAreas = require(`./data/${lang}/professionalAreas`);
+const education = require(`./data/${lang}/education`);
+const courses = require(`./data/${lang}/courses`);
+
 const initializeConstants = require("./utils/helperFunctions");
 const {
   renderHeading,
@@ -15,7 +19,6 @@ const {
   renderEssentialEducation,
   renderCourses,
   renderContactInformation,
-  renderFinalNote,
 } = require("./utils/renderFunctions");
 
 require("dotenv").config();
@@ -23,7 +26,7 @@ require("dotenv").config();
 const doc = new PDFDocument();
 doc.pipe(fs.createWriteStream("output.pdf"));
 
-const constants = initializeConstants(doc);
+const constants = initializeConstants(doc, lang);
 
 renderHeading(doc, constants);
 
@@ -40,35 +43,25 @@ renderSection(doc, constants, sections[1]);
 
 doc.moveDown(0.1);
 professionalAreas.forEach((professionalArea) =>
-  renderArea(doc, constants, professionalArea)
+  renderArea(doc, constants, professionalArea, lang)
 );
 
 doc.moveDown(1);
 renderSection(doc, constants, sections[2]);
 
-knowledgeAreas.forEach((knowledgeArea) =>
-  renderArea(doc, constants, knowledgeArea)
-);
+doc.moveDown(0.4);
+renderEssentialEducation(doc, constants, education, lang);
 
 doc.moveDown(1);
 renderSection(doc, constants, sections[3]);
 
 doc.moveDown(0.4);
-renderEssentialEducation(doc, constants);
+renderCourses(doc, constants, courses, lang);
 
 doc.moveDown(1);
 renderSection(doc, constants, sections[4]);
 
-doc.moveDown(0.4);
-renderCourses(doc, constants, courses);
-
-doc.moveDown(1);
-renderSection(doc, constants, sections[5]);
-
 doc.moveDown(0.6);
 renderContactInformation(doc, constants);
-
-doc.moveDown(0.7);
-renderFinalNote(doc, constants);
 
 doc.end();

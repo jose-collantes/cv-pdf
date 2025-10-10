@@ -43,10 +43,13 @@ function renderJob(doc, constants, job) {
   renderExperience(doc, constants, job);
 }
 
-function renderArea(doc, constants, area) {
+function renderArea(doc, constants, area, lang) {
   const { lightBlue, darkGrey } = constants;
 
-  doc.moveDown(0.4);
+  if (lang === "es" && area.title === "Aplicaciones de Escritorio")
+    doc.addPage();
+  else doc.moveDown(0.4);
+
   doc.font("Helvetica-Bold").fontSize(10.5).fillColor(darkGrey);
   doc.text(area.title, { continued: true }).text(":");
 
@@ -72,17 +75,7 @@ function renderArea(doc, constants, area) {
   }
 }
 
-function renderEssentialEducation(doc, constants) {
-  const education = {
-    title: "MSc Aerospace Engineering",
-    universities: [
-      {
-        name: "UNIVERSIDAD POLITÉCNICA DE MADRID",
-        period: "(Sep 08 - Nov 15)",
-      },
-    ],
-  };
-
+function renderEssentialEducation(doc, constants, education, lang) {
   renderExperience(doc, constants, education);
 
   const { darkGrey } = constants;
@@ -90,24 +83,36 @@ function renderEssentialEducation(doc, constants) {
   doc.moveUp(0.3);
   doc.font("Helvetica-Bold").fillColor(darkGrey).fontSize(10.5);
   doc
-    .text("Specialty: ", { continued: true })
+    .text(lang === "en" ? "Specialty: " : "Especialidad: ", { continued: true })
     .font("Helvetica")
-    .text("A1 - Aircrafts");
+    .text(lang === "en" ? "A1 - Aircrafts" : "A1- Aviones");
 
   doc.moveDown(0.5);
   doc.font("Helvetica-Bold");
   doc
-    .text("Final Project: ", { continued: true })
+    .text(lang === "en" ? "Final Project: " : "Proyecto Final: ", {
+      continued: true,
+    })
     .font("Helvetica")
     .text(
-      "Unmmaned Aerial Vehicle – MTOW<150 kg. Manufacturing and certifiability assessment. Market research (First class)."
+      lang === "en"
+        ? "Unmmaned Aerial Vehicle – MTOW<150 kg. Manufacturing and certifiability assessment. Market research (First class)."
+        : "Vehículo Aéreo no Tripulado - MTOW < 150kg. Fabricación y evaluación de la certificabilidad. Estudio de Mercado."
     );
 }
 
-function renderCourses(doc, constants, courses) {
+function renderCourses(doc, constants, courses, lang) {
   const { darkGrey } = constants;
   doc.font("Helvetica").fontSize(10.5).fillColor(darkGrey);
-  renderList(doc, courses);
+
+  const numCoursesPageLimit = lang === "en" ? 13 : 7;
+
+  const courses1 = courses.slice(0, numCoursesPageLimit);
+  const courses2 = courses.slice(numCoursesPageLimit);
+
+  renderList(doc, courses1);
+  doc.addPage();
+  renderList(doc, courses2);
 }
 
 function renderContactInformation(doc, constants) {
