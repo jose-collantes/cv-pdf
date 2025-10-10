@@ -21,11 +21,14 @@ module.exports = [
     ],
   },
   {
+    title: "Web Applications",
+    skillsOrProjects: ["Build web apps with the ASP.NET Core MVC framework."],
+  },
+  {
     title: "Desktop Applications",
     skillsOrProjects: [
-      "Developed two versions of a business management application: Version 1 used Python and tkinter with CSV files for data storage. Version 2 adopted professional standards, \
-  utilizing MS Access tables and forms. \nBoth versions enable inventory management, invoice creation (Word/PDF), and reporting. Version 2 \
-  introduces enhanced customer management functionality, allowing users to maintain customer records separately.",
+      "Develop desktop apps using different technologies such as Python/tkinter, MS Access and electron.js. \nFor more information about \
+      some of my most prominent projects please visit my linkedin profile page.",
     ],
   },
   {

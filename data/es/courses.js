@@ -1,6 +1,8 @@
 module.exports = [
+  '"The Ultimate Docker Course" – codewithmosh.com.',
   '"Next.js Projects: Build an Issue Tracker" – codewithmosh.com.',
   '"Mastering Next.js 13 with TypeScript" – codewithmosh.com.',
+  '"The Ultimate TypeScript Course" – codewithmosh.com.',
   '"The Complete Node.js Course" – codewithmosh.com',
   '"The Ultimate Git Course" – codewithmosh.com',
   '"React: Intermediate Topics" – codewithmosh.com',
@@ -16,5 +18,5 @@ module.exports = [
   '"C# Intermediate: Classes, Interfaces and OOP" – udemy (Mosh Hamendani)',
   '"C# Basics for Beginners: Learn C# Fundamentals by Coding" – udemy (Mosh Hamendani)',
   '"Data Scientist with Python career track" – datacamp.com.',
-  "Certificate in English (B2) – Official School of Languages - Jerez de la Frontera (2005 - 2008)",
+  "Certificado en Inglés (B2) – Escuela Oficial de Idiomas - Jerez de la Frontera (2005 - 2008)",
 ];

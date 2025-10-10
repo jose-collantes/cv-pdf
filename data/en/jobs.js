@@ -1,13 +1,13 @@
 module.exports = [
   {
-    title: "Developer / User Support",
+    title: "Software Developer",
     companies: [
       { name: "FREELANCE", period: "(Jan 23 - Now)" },
       { name: "AYESA (ENDESA FRANCE)", period: "(Dec 20 - Dec 22)" },
     ],
   },
   {
-    title: "Programmer",
+    title: "Data Analyst",
     companies: [
       {
         name: "ISATI ENGINEERING SOLUTIONS (CT INGENIEROS GETAFE)",
