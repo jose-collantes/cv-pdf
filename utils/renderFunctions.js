@@ -116,11 +116,21 @@ function renderCourses(doc, constants, courses, lang) {
 }
 
 function renderContactInformation(doc, constants) {
-  const { margins, email, phone, githubPage, linkedinPage } = constants;
+  const { margins, email, phone, webPage, githubPage, linkedinPage } =
+    constants;
 
   doc.fontSize(10.5).font("Helvetica");
   renderImageAndText(doc, margins, email, "./assets/email-30.png", 0.5, 0, 3.3);
   renderImageAndText(doc, margins, phone, "./assets/phone-30.png", 0.45, 1, 3);
+  renderImageAndText(
+    doc,
+    margins,
+    webPage,
+    "./assets/website-30.png",
+    0.45,
+    1,
+    3
+  );
   renderImageAndText(
     doc,
     margins,
